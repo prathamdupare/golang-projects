@@ -1,11 +1,10 @@
 package main
 
-import (
-	"testing"
-)
+import "testing"
 
 func Sum(numbers [5]int) int {
 	sum := 0
+
 	for _, number := range numbers {
 		sum += number
 	}
@@ -17,6 +16,7 @@ func TestSum(t *testing.T) {
 
 	got := Sum(numbers)
 	want := 15
+
 	if got != want {
 		t.Errorf("got %d ,want %d given, %v", got, want, numbers)
 	}
